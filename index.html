@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Diabetes</title>
+    <meta name="description" content="Presentación sobre la diabetes: tipos, causas, síntomas, diagnóstico, tratamiento y prevención.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="portada">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Blue_circle_for_diabetes.svg" alt="Símbolo internacional de la diabetes" class="logo-diabetes">
+
+        <h1>DIABETES</h1>
+        <p class="subtitulo">Una mirada a sus tipos, causas, síntomas y tratamientos</p>
+
+        <div class="datos" aria-label="Autores de la presentación">
+            <p>Alexander Castaño D.</p>
+            <p>Deiby Becerra A.</p>
+            <p>Juan Esteban Sierra A.</p>
+            <p>Samuel Jaraba G.</p>
+        </div>
+
+        <div class="scroll-indicator" onclick="document.querySelector('nav').scrollIntoView({behavior:'smooth'})" aria-label="Ir a la navegación de la presentación">
+            <span>Explorar</span>
+            <span aria-hidden="true">↓</span>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#mito-realidad" class="active">Mito o realidad</a></li>
+            <li><a href="#que-es">¿Qué es?</a></li>
+            <li><a href="#tipos">Tipos</a></li>
+            <li><a href="#factores-riesgo">Factores</a></li>
+            <li><a href="#diagnostico">Diagnóstico</a></li>
+            <li><a href="#sintomas">Síntomas</a></li>
+            <li><a href="#tratamiento">Tratamiento</a></li>
+            <li><a href="#prevencion">Prevención</a></li>
+            <li><a href="#complicaciones">Complicaciones</a></li>
+            <li><a href="#datos">Datos</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#bibliografia">Bibliografía</a></li>
+        </ul>
+    </nav>
+
+    <section id="mito-realidad" class="slide active" style="background: var(--blanco);">
+        <div class="slide-content">
+            <h2><span class="icono-titulo">🧠</span>Mito o realidad</h2>
+            <p class="subtitulo-seccion">¿La diabetes es causada por consumir mucha azúcar?</p>
+            <div class="mito-realidad-box">
+                <h3>La diabetes es causada por consumir mucha azúcar</h3>
+                <div class="mito-realidad-opciones">
+                    <button class="opcion-btn mito" type="button" data-respuesta="mito" aria-pressed="false">Mito</button>
+                    <button class="opcion-btn realidad" type="button" data-respuesta="realidad" aria-pressed="false">Realidad</button>
+                </div>
+                <div id="respuesta-mito-realidad" class="respuesta-panel" aria-live="polite"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="que-es" class="slide" style="background: var(--gris-claro);">
+        <div class="slide-content">
+            <h2><span class="icono-titulo">🧬</span>¿Qué es la diabetes?</h2>
+            <p class="subtitulo-seccion">Definición, mecanismo y papel de la insulina</p>
+            <p>La diabetes mellitus es una enfermedad metabólica crónica caracterizada por niveles elevados de glucosa en sangre (hiperglucemia), debido a una alteración en la secreción de insulina, a una resistencia a su acción, o a ambas.</p>
+            <h3>El papel de la insulina</h3>
+            <p>El cuerpo descompone los alimentos ricos en carbohidratos en glucosa, que pasa a la sangre. La <strong>insulina</strong>, producida por las células beta del páncreas, actúa como una "llave" que permite que la glucosa entre en las células del cuerpo para utilizarse como energía. Sin insulina suficiente, o si el cuerpo no responde a ella, la glucosa se acumula en la sangre provocando hiperglucemia.</p>
+            <div class="img-container">
+                <img src="https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840e5beab817a5d84fa821e7db61981ec84c3b4a3f072a7a2e1899c9fb06c6eeb276a4f7ce49e001b0cf382976d673d640fa4fc5d58115f99bf20df85189704a240614b327c74706318316f3ee903d6b370ce8322fbfb07febdd1cd6c6d8307" alt="Producción de insulina en las células beta del páncreas">
+                <p class="caption">Las células beta del páncreas producen insulina. En la diabetes tipo 1 son destruidas; en la tipo 2, el cuerpo se vuelve resistente a su acción.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="factores-riesgo" class="slide" style="background: var(--blanco);">
+        <div class="slide-content">
+            <h2><span class="icono-titulo">⚠️</span>Factores de riesgo</h2>
+            <p class="subtitulo-seccion">Riesgos asociados a la diabetes tipo 2 y tipo 1</p>
+            <p>La diabetes es una enfermedad en la que intervienen factores de riesgo prevenibles, relacionados con el estilo de vida de la persona, y <strong>no prevenibles</strong>, como los genéticos o la edad.</p>
+            <div class="risk-grid">
+                <div class="risk-card no-preventible">
+                    <h3>Diabetes tipo 1</h3>
+                    <p>Se desconoce la causa exacta, pero existen varios factores que aumentan el riesgo.</p>
+                    <ul>
+                        <li>Riesgo genético: más de 50 genes relacionados</li>
+                        <li>Antecedentes familiares de diabetes tipo 1</li>
+                        <li>Agrupación de enfermedades autoinmunes</li>
+                        <li>Presencia de autoanticuerpos contra los islotes</li>
+                        <li>Factores ambientales: infecciones virales, nutrición temprana, desequilibrio intestinal y actividad física</li>
+                    </ul>
+                </div>
+                <div class="risk-card preventible">
+                    <h3>Diabetes tipo 2</h3>
+                    <p>Una combinación de factores genéticos, biológicos, del estilo de vida y ambientales aumenta la probabilidad de desarrollarla.</p>
+                    <ul>
+                        <li>Antecedentes familiares de diabetes</li>
+                        <li>Sobrepeso u obesidad</li>
+                        <li>Dieta poco saludable</li>
+                        <li>Inactividad física</li>
+                        <li>Aumento de la edad</li>
+                        <li>Hipertensión arterial</li>
+                        <li>Origen étnico</li>
+                        <li>Tolerancia alterada a la glucosa (prediabetes)</li>
+                        <li>Antecedentes de diabetes durante el embarazo</li>
+                        <li>Mala alimentación durante el embarazo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diagnostico" class="slide" style="background: var(--blanco);">
+        <div class="slide-content">
+            <h2><span class="icono-titulo">🩺</span>Diagnóstico de la diabetes</h2>
+            <p class="subtitulo-seccion">¿Cómo se diagnostica la diabetes?</p>
+            <p>Para diagnosticar diabetes se utilizan diferentes pruebas de sangre, estas miden la cantidad de glucosa en la sangre o glicemia.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+                <div style="background: var(--azul-claro); border-left: 5px solid var(--azul-idf); padding: 1rem 1.2rem; border-radius: 12px;">
+                    <strong>Glucosa en ayunas</strong>
+                    <p style="margin: 0.5rem 0 0;">Mide la glucosa en sangre después de un mínimo de 8 horas en ayunas.</p>
+                </div>
+                <div style="background: #FFF3E0; border-left: 5px solid var(--naranja); padding: 1rem 1.2rem; border-radius: 12px;">
+                    <strong>Glucosa aleatoria o casual</strong>
+                    <p style="margin: 0.5rem 0 0;">Análisis de glucosa en cualquier momento del día.</p>
+                </div>
+                <div style="background: #E8F5E9; border-left: 5px solid var(--verde); padding: 1rem 1.2rem; border-radius: 12px;">
+                    <strong>Hemoglobina glicosilada (A1C)</strong>
+                    <p style="margin: 0.5rem 0 0;">Indica el promedio de azúcar en sangre de los últimos 3 meses y no requiere ayuno.</p>
+                </div>
+                <div style="background: #F3E5F5; border-left: 5px solid var(--morado); padding: 1rem 1.2rem; border-radius: 12px;">
+                    <strong>Prueba oral de tolerancia a la glucosa (TOG)</strong>
+                    <p style="margin: 0.5rem 0 0;">Evalúa cómo el cuerpo maneja la glucosa después de una carga oral de 75 gramos de glucosa.</p>
+                </div>
+            </div>
+            <h3>📊 Criterios para diagnosticar diabetes</h3>
+            <table class="tabla-comparativa">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Normal</th>
+                        <th>Pre-diabetes</th>
+                        <th>Diabetes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Glucosa en ayunas</strong></td>
+                        <td>&lt;100 mg/dL</td>
+                        <td>100-125 mg/dL</td>
+                        <td>≥126 mg/dL</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Glucosa en sangre aleatoria</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td>≥200 mg/dL</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TOG</strong></td>
+                        <td>&lt;140 mg/dL</td>
+                        <td>140-199 mg/dL</td>
+                        <td>≥200 mg/dL</td>
+                    </tr>
+                    <tr>
+                        <td><strong>A1C</strong></td>
+                        <td>&lt;5.7%</td>
+                        <td>5.7%-6.4%</td>
+                        <td>≥6.5%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="tipos" class="slide" style="background: var(--blanco);">
+        <div class="slide-content">
+            <h2><span class="icono-titulo">🏷️</span>Clasificación — Tipos de diabetes</h2>
+            <p class="subtitulo-seccion">Existen cuatro tipos principales reconocidos por la Federación Internacional de Diabetes (IDF)</p>
+            <div class="tipos-grid">
+                <div class="tipo-card t1">
+                    <div class="encabezado">Tipo 1</div>
+                    <div class="cuerpo">
+                        <div class="porcentaje">5-10%</div>
+                        <p>Enfermedad <strong>autoinmune</strong> en la cual el sistema inmunitario destruye las células beta del páncreas, encargadas de producir insulina.</p>
+                        <ul>
+                            <li>Requiere administración diaria de insulina</li>
+                            <li>No se puede prevenir actualmente</li>
+                            <li>Suele aparecer en infancia o adolescencia</li>
+                            <li>No está relacionada con el estilo de vida</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tipo-card t2">
+                    <div class="encabezado">Tipo 2</div>
+                    <div class="cuerpo">
+                        <div class="porcentaje">90%</div>
+                        <p>Resulta del uso ineficaz de la insulina por parte del cuerpo (<strong>resistencia a la insulina</strong>). Es el tipo más común.</p>
+                        <ul>
+                            <li>Asociada a obesidad y sedentarismo</li>
+                            <li>Puede prevenirse o retrasarse</li>
+                            <li>Se trata con dieta, ejercicio y medicación</li>
+                            <li>Cada vez más frecuente en jóvenes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tipo-card tg">
+                    <div class="encabezado">Gestacional</div>
+                    <div class="cuerpo">
+                        <div class="porcentaje">Variable</div>
+                        <p>Hiperglucemia que aparece <strong>durante el embarazo</strong>, con valores por encima de lo normal pero por debajo del diagnóstico de diabetes.</p>
+                        <ul>
+                            <li>Aumenta el riesgo de complicaciones del embarazo</li>
+                            <li>Madres e hijos con mayor riesgo de tipo 2</li>
+                            <li>Suele desaparecer tras el parto</li>
+                            <li>Se diagnostica mediante pruebas prenatales</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tipo-card t5">
+                    <div class="encabezado">Tipo 5 (Nueva)</div>
+                    <div class="cuerpo">
+                        <div class="porcentaje">2025</div>
+                        <p>Anteriormente conocida como <strong>diabetes relacionada con la desnutrición</strong>. Reconocida oficialmente por la IDF en abril de 2025.</p>
+                        <ul>
+                            <li>Deficiencia de insulina por malnutrición</li>
+                            <li>No vinculada a obesidad ni al sistema inmune</li>
+                            <li>Afecta a poblaciones vulnerables</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h3>📊 Tabla comparativa</h3>
+            <table class="tabla-comparativa">
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Tipo 1</th>
+                        <th>Tipo 2</th>
+                        <th>Gestacional</th>
+                        <th>Tipo 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Causa</strong></td>
+                        <td>Autoinmune</td>
+                        <td>Resistencia a insulina</td>
+                        <td>Cambios hormonales</td>
+                        <td>Desnutrición</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Edad habitual</strong></td>
+                        <td>Infancia/juventud</td>
+                        <td>Adultez</td>
+                        <td>Embarazo</td>
+                        <td>Jóvenes desnutridos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>¿Prevenible?</strong></td>
+                        <td>No</td>
+                        <td>Sí</td>
+                        <td>Parcialmente</td>
+                        <td>Mejorando nutrición</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tratamiento</strong></td>
+                        <td>Insulina</td>
+                        <td>Dieta + ejercicio + medicación</td>
+                        <td>Dieta + insulina si necesario</td>
+                        <td>En investigación</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prevalencia</strong></td>
+                        <td>5-10%</td>
+                        <td>&gt;90%</td>
+                        <td>Variable</td>
+                        <td>Poblaciones vulnerables</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="sintomas" class="slide" style="background: var(--gris-claro);">
+        <div class="slide-content">
+            <h2><span class="icono-titulo">⚠️</span>Signos y síntomas</h2>
+            <p class="subtitulo-seccion">Diferencias entre diabetes tipo 1 y tipo 2</p>
+            <div class="risk-grid">
+                <div class="risk-card no-preventible">
+                    <h3>Diabetes tipo 1</h3>
+                    <p>Los síntomas suelen aparecer <strong>rápidamente</strong> y pueden llegar a ser graves.</p>
+                    <ul>
+                        <li>Sed anormal y boca seca</li>
+                        <li>Pérdida de peso involuntaria</li>
+                        <li>Micción frecuente</li>
+                        <li>Falta de energía, cansancio</li>
+                        <li>Hambre constante</li>
+                        <li>Visión borrosa</li>
+                        <li>Enuresis nocturna</li>
+                        <li>CAD (cetoacidosis diabética)</li>
+                    </ul>
+                </div>
+                <div class="risk-card preventible">
+                    <h3>Diabetes tipo 2</h3>
+                    <p>Los signos y síntomas aparecen <strong>de forma gradual</strong> y, a menudo, son leves o inexistentes.</p>
+                    <ul>
+                        <li>Sed excesiva y boca seca</li>
+                        <li>Micción frecuente</li>
+                        <li>Falta de energía, cansancio</li>
+                        <li>Cicatrización tardía de heridas</li>
+                        <li>Infecciones recurrentes de la piel</li>
+                        <li>Visión borrosa</li>
+                        <li>Hormigueo o entumecimiento en manos y pies</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="alerta-box danger">
+                <h4>⚠️ Importante</h4>
+                <p>La diabetes tipo 1 puede confundirse con otras enfermedades y retrasar el tratamiento. La tipo 2 suele pasar desapercibida durante años, y muchas personas la descubren cuando ya aparecen complicaciones.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tratamiento" class="slide" style="background: var(--blanco);">
+        <div class="slide-content">
+            <h2><span class="icono-titulo">💊</span>Tratamiento de la diabetes</h2>
+            <p class="subtitulo-seccion">Opciones terapéuticas según el tipo y características de la diabetes</p>
+
+            <h3>🩸 La insulina</h3>
+
+            <div class="risk-grid">
+                <div class="risk-card preventible">
+                    <h4>Tipos de insulina</h4>
+                    <ul>
+                        <li><strong>Insulina rápida:</strong> Actúa en 15-20 minutos, ideal para controlar picos de glucosa</li>
+                        <li><strong>Insulina corta:</strong> Comienza a actuar en 30 minutos</li>
+                        <li><strong>Insulina intermedia:</strong> Actúa entre 1-3 horas</li>
+                        <li><strong>Insulina larga:</strong> Proporciona cobertura basal durante 24 horas</li>
+                    </ul>
+                </div>
+                <div class="risk-card no-preventible">
+                    <h4>Vías de administración</h4>
+                    <ul>
+                        <li><strong>Inyecciones:</strong> Subcutáneas múltiples al día</li>
+                        <li><strong>Bomba de insulina:</strong> Suministra insulina de forma continua</li>
+                        <li><strong>Pens o plumas:</strong> Dispositivos de inyección precisa</li>
+                        <li><strong>Jeringas:</strong> Método tradicional de administración</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>💊 Medicamentos orales para diabetes tipo 2</h3>
+            <p>Los medicamentos orales ayudan al cuerpo a utilizar la insulina de forma más eficaz o a reducir la producción de glucosa en el hígado. Se utilizan cuando los cambios en el estilo de vida no son suficientes.</p>
+
+            <div class="prevencion-grid">
+                <div class="prevencion-card">
+                    <span class="icono">💧</span>
+                    <h4>Metformina</h4>
+                    <p>Reduce la producción de glucosa en el hígado y mejora la sensibilidad a la insulina.</p>
+                </div>
+                <div class="prevencion-card">
+                    <span class="icono">⬇️</span>
+                    <h4>Inhibidores de la SGLT2</h4>
+                    <p>Permiten que el riñón elimine más glucosa a través de la orina.</p>
+                </div>
+                <div class="prevencion-card">
+                    <span class="icono">🔄</span>
+                    <h4>Inhibidores de la DPP-4</h4>
+                    <p>Aumentan los niveles de incretinas para estimular la liberación de insulina.</p>
+                </div>
+                <div class="prevencion-card">
+                    <span class="icono">🌾</span>
+                    <h4>Sulfonilureas</h4>
+                    <p>Estimulan el páncreas para que libere más insulina.</p>
+                </div>
+            </div>
+
+            <h3>💉 Medicamentos inyectables no insulínicos</h3>
+            <p>Estos medicamentos se administran por inyección y son una alternativa o complemento a los medicamentos orales en la diabetes tipo 2.</p>
+
+            <div style="background: var(--azul-claro); border-left: 5px solid var(--azul-idf); padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+                <h4 style="margin-top: 0; color: var(--azul-oscuro);">Agonistas del receptor GLP-1</h4>
+                <p>Imitan la acción de una hormona natural que aumenta la liberación de insulina. Ventajas: ayudan a perder peso, mejoran la función cardiovascular y se administran una o dos veces por semana.</p>
+            </div>
+
+            <div style="background: #F3E5F5; border-left: 5px solid var(--morado); padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+                <h4 style="margin-top: 0; color: var(--morado);">Inhibidores de la enzima DPP-4</h4>
+                <p>Disponibles también en formato inyectable, estos medicamentos preservan los niveles de incretina para mejorar el control glucémico sin provocar hipoglucemia.</p>
+            </div>
+
+            <div class="alerta-box" style="background: #FFF8E1; border-color: var(--azul-idf); margin-top: 1.5rem;">
+                <h4 style="color: var(--azul-oscuro);">📋 Consideraciones importantes</h4>
+                <ul style="margin-left: 1.5rem; margin-top: 0.8rem;">
+                    <li>El tratamiento debe ser personalizado según el tipo de diabetes, comorbilidades y objetivos de control glucémico.</li>
+                    <li>Combinar diferentes tipos de medicamentos puede mejorar el control glucémico.</li>
+                    <li>Los cambios en el estilo de vida (dieta y ejercicio) son fundamentales en cualquier tratamiento.</li>
+                    <li>El monitoreo regular de la glucosa es esencial para ajustar la terapia.</li>
+                    <li>Algunos medicamentos requieren inyección, mientras que otros son orales.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="prevencion" class="slide" style="background: var(--blanco);">
+        <div class="slide-content">
+            <h2><span class="icono-titulo">🛡️</span>Prevención de la diabetes</h2>
+            <p class="subtitulo-seccion">El papel del estilo de vida y la actividad física</p>
+            <p>Actualmente, la diabetes tipo 1 no se puede prevenir. Sin embargo, existen enfoques eficaces para prevenir la diabetes tipo 2 y retrasar o prevenir las complicaciones de todos los tipos. Se ha demostrado que medidas sencillas del estilo de vida son eficaces para prevenir o retrasar la aparición de la diabetes tipo 2 en aproximadamente un <strong>60%</strong>.</p>
+            <div class="prevencion-grid">
+                <div class="prevencion-card">
+                    <span class="icono">💪</span>
+                    <h4>Peso saludable</h4>
+                    <p>Lograr y mantener un peso corporal saludable reduce significativamente el riesgo.</p>
+                </div>
+                <div class="prevencion-card">
+                    <span class="icono">🏃</span>
+                    <h4>Actividad física</h4>
+                    <p>Al menos 30 minutos de actividad regular de intensidad moderada la mayoría de los días.</p>
+                </div>
+                <div class="prevencion-card">
+                    <span class="icono">🥗</span>
+                    <h4>Dieta saludable</h4>
+                    <p>Evitar el azúcar y las grasas saturadas. Consumir frutas, verduras y cereales integrales.</p>
+                </div>
+                <div class="prevencion-card">
+                    <span class="icono">🚭</span>
+                    <h4>No fumar</h4>
+                    <p>El tabaco aumenta el riesgo de diabetes y enfermedades cardiovasculares.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="complicaciones" class="slide" style="background: var(--gris-claro);">
+        <div class="slide-content">
+            <h2><span class="icono-titulo">🏥</span>Complicaciones de la diabetes</h2>
+            <p class="subtitulo-seccion">Consecuencias a largo plazo de la hiperglucemia</p>
+            <div class="img-container">
+                <img src="https://latam.patiadiabetes.com/wp-content/uploads/2016/01/complicaciones-diabetes-1.png" alt="Órganos afectados por las complicaciones de la diabetes">
+                <p class="caption">La diabetes no controlada puede afectar múltiples órganos del cuerpo humano.</p>
+            </div>
+            <div class="complicaciones-grid">
+                <div class="complicacion-card">
+                    <strong>❤️ Enfermedades cardiovasculares</strong>
+                    <p>Las personas con diabetes tienen hasta <strong>3 veces más</strong> probabilidades de desarrollar enfermedades cardiovasculares.</p>
+                </div>
+                <div class="complicacion-card">
+                    <strong>👁️ Pérdida de visión</strong>
+                    <p><strong>1 de cada 3</strong> personas con diabetes desarrollará algún tipo de pérdida de visión a lo largo de su vida.</p>
+                </div>
+                <div class="complicacion-card">
+                    <strong>🫘 Insuficiencia renal</strong>
+                    <p>La insuficiencia renal es <strong>10 veces más frecuente</strong> en personas con diabetes.</p>
+                </div>
+                <div class="complicacion-card">
+                    <strong>🦵 Amputaciones</strong>
+                    <p>Cada <strong>30 segundos</strong> se pierde un miembro inferior a causa de la diabetes en algún lugar del mundo.</p>
+                </div>
+                <div class="complicacion-card">
+                    <strong>🧠 Daño nervioso</strong>
+                    <p>La neuropatía diabética puede causar dolor, hormigueo y pérdida de sensibilidad en extremidades.</p>
+                </div>
+                <div class="complicacion-card">
+                    <strong>🦷 Problemas dentales</strong>
+                    <p>Mayor riesgo de problemas en encías.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="datos" class="slide" style="background: var(--blanco);">
+        <div class="slide-content">
+            <h2><span class="icono-titulo">📊</span>La diabetes en el mundo</h2>
+            <p class="subtitulo-seccion">Datos y cifras del Atlas de la Diabetes de la IDF</p>
+            <p>Estos son los datos más recientes según el Atlas de la Diabetes de la IDF:</p>
+            <div class="estadisticas">
+                <div class="estadistica-card">
+                    <span class="numero">589M</span>
+                    <span class="descripcion">Adultos con diabetes en el mundo</span>
+                </div>
+                <div class="estadistica-card">
+                    <span class="numero">4 en 5</span>
+                    <span class="descripcion">Adultos con diabetes viven en países de ingresos bajos y medios</span>
+                </div>
+                <div class="estadistica-card">
+                    <span class="numero">3.4M</span>
+                    <span class="descripcion">Muertes por diabetes en 2024</span>
+                </div>
+                <div class="estadistica-card">
+                    <span class="numero">853M</span>
+                    <span class="descripcion">Adultos padecerán diabetes en 2050</span>
+                </div>
+                <div class="estadistica-card">
+                    <span class="numero">252M</span>
+                    <span class="descripcion">Personas con diabetes no diagnosticadas</span>
+                </div>
+                <div class="estadistica-card">
+                    <span class="numero">10.5%</span>
+                    <span class="descripcion">De la población mundial (20-79 años) afectada</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 2.5rem; padding: 1.5rem; background: linear-gradient(135deg, #E8F5E9, #FFFFFF); border: 2px solid #4CAF50; border-radius: 14px;">
+                <h3 style="color: #2E7D32; margin-bottom: 1rem; font-size: 1.8rem;">Diabetes en Colombia (2024)</h3>
+                <div class="estadisticas" style="margin: 0;">
+                    <div class="estadistica-card">
+                        <span class="numero">36,728,500</span>
+                        <span class="descripcion">Población adulta total</span>
+                    </div>
+                    <div class="estadistica-card">
+                        <span class="numero">8,4%</span>
+                        <span class="descripcion">de prevalencia de diabetes en adultos</span>
+                    </div>
+                    <div class="estadistica-card">
+                        <span class="numero">3,033,800</span>
+                        <span class="descripcion">Total de casos de diabetes en adultos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="slide" style="background: var(--blanco);">
+        <div class="slide-content">
+            <h2><span class="icono-titulo">❔</span>Cuestionario de repaso</h2>
+            <p class="subtitulo-seccion">Pon a prueba lo aprendido</p>
+            <div class="quiz-box">
+                <div class="quiz-question" data-correct="b">
+                    <h3>1. ¿Cuál de estas opciones describe mejor la diabetes?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" type="button" data-answer="a">Una enfermedad solo causada por consumir demasiada azúcar.</button>
+                        <button class="quiz-option" type="button" data-answer="b">Una enfermedad crónica con niveles altos de glucosa en sangre.</button>
+                        <button class="quiz-option" type="button" data-answer="c">Una infección momentánea que pasa sola.</button>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-correct="a">
+                    <h3>2. ¿Qué prueba mide el promedio de azúcar en sangre de los últimos 3 meses?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" type="button" data-answer="a">Hemoglobina A1C</button>
+                        <button class="quiz-option" type="button" data-answer="b">Radiografía</button>
+                        <button class="quiz-option" type="button" data-answer="c">Tomografía</button>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-correct="b">
+                    <h3>3. ¿La diabetes tipo 2 puede prevenirse o retrasarse con cambios en el estilo de vida?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" type="button" data-answer="a">Falso</button>
+                        <button class="quiz-option" type="button" data-answer="b">Verdadero</button>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-correct="a">
+                    <h3>4. ¿Cuál es una señal frecuente de la diabetes?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" type="button" data-answer="a">Sed excesiva y micción frecuente</button>
+                        <button class="quiz-option" type="button" data-answer="b">Dolor de muelas sin motivo</button>
+                        <button class="quiz-option" type="button" data-answer="c">Pérdida de cabello superficial</button>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-correct="b">
+                    <h3>5. ¿La diabetes no se debe solo a consumir mucha azúcar; también influyen la genética, la resistencia a la insulina y otros factores?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" type="button" data-answer="a">Falso</button>
+                        <button class="quiz-option" type="button" data-answer="b">Verdadero</button>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div id="quiz-result" class="quiz-result"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bibliografia" class="slide" style="background: var(--gris-claro);">
+        <div class="slide-content">
+            <h2><span class="icono-titulo">📚</span>Bibliografía</h2>
+            <p class="subtitulo-seccion">Referencias utilizadas en esta exposición</p>
+            <div class="bibliografia">
+                <p style="font-size: 0.95rem; margin-bottom: 1rem; font-style: italic; color: var(--gris-medio);">Referencias ordenadas según las Normas APA (7.ª edición)</p>
+                <ol>
+                    <li>Federación Internacional de Diabetes. (2025, mayo 5). <em>¿Qué es la diabetes? Una enfermedad crónica en la que el cuerpo no puede producir insulina o no puede utilizarla de forma eficaz.</em> Recuperado de <a href="https://idf.org/es/about-diabetes/what-is-diabetes/" target="_blank" rel="noopener noreferrer">https://idf.org/es/about-diabetes/what-is-diabetes/</a></li>
+                    <li>Federación Internacional de Diabetes. (2026, julio 16). <em>Diabetes tipo 1: causas, síntomas, tratamiento y control.</em> Recuperado de <a href="https://idf.org/es/about-diabetes/type-1-diabetes/" target="_blank" rel="noopener noreferrer">https://idf.org/es/about-diabetes/type-1-diabetes/</a></li>
+                    <li>Federación Internacional de Diabetes. (2026, julio 16). <em>Diabetes de tipo 2.</em> Recuperado de <a href="https://idf.org/es/about-diabetes/type-2-diabetes/" target="_blank" rel="noopener noreferrer">https://idf.org/es/about-diabetes/type-2-diabetes/</a></li>
+                    <li>Federación Internacional de Diabetes. (2026, julio 16). <em>Diabetes gestacional: explicación de los síntomas, los riesgos y el tratamiento.</em> Recuperado de <a href="https://idf.org/es/about-diabetes/gestational-diabetes/" target="_blank" rel="noopener noreferrer">https://idf.org/es/about-diabetes/gestational-diabetes/</a></li>
+                    <li>Federación Internacional de Diabetes. (2025, agosto 19). <em>¿Qué es la diabetes de tipo 5 (diabetes relacionada con la desnutrición)?</em> Recuperado de <a href="https://idf.org/es/about-diabetes/type-5-diabetes/" target="_blank" rel="noopener noreferrer">https://idf.org/es/about-diabetes/type-5-diabetes/</a></li>
+                    <li>Federación Internacional de Diabetes. (2025, abril 7). <em>IDF Diabetes Atlas: Global Diabetes Data &amp; Statistics.</em> Recuperado de <a href="https://diabetesatlas.org/" target="_blank" rel="noopener noreferrer">https://diabetesatlas.org/</a></li>
+                    <li>Federación Internacional de Diabetes. (s.f.). <em>Colombia.</em> Recuperado de <a href="https://idf.org/es/our-network/regions-and-members/south-and-central-america/members/colombia/" target="_blank" rel="noopener noreferrer">https://idf.org/es/our-network/regions-and-members/south-and-central-america/members/colombia/</a></li>
+                    <li>Federación Internacional de Diabetes. (2024, Noviembre 1). <em>¿Qué es la insulina? Conoce los tipos, cómo funciona y los efectos secundarios.</em> Recuperado de <a href="https://idf.org/es/managing-diabetes/insulin/" target="_blank" rel="noopener noreferrer">https://idf.org/es/managing-diabetes/insulin/</a></li>
+                    <li>Federación Internacional de Diabetes. (2024, Noviembre 8). <em>Medicamentos orales para el control de la diabetes tipo 2 y los niveles de glucosa en sangre.</em> Recuperado de <a href="https://idf.org/es/managing-diabetes/oral-medication/" target="_blank" rel="noopener noreferrer">https://idf.org/es/managing-diabetes/oral-medication/</a></li>
+                    <li>Federación Internacional de Diabetes. (2026, Marzo 31). <em>Medicamentos inyectables distintos de la insulina.</em> Recuperado de <a href="https://idf.org/es/managing-diabetes/non-insulin-injectables/" target="_blank" rel="noopener noreferrer">https://idf.org/es/managing-diabetes/non-insulin-injectables/</a></li>
+                </ol>
+            </div>
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, var(--azul-claro), var(--blanco)); border-radius: 12px;">
+                <h3 style="color: var(--azul-oscuro);">¡Gracias por su atención!</h3>
+                <p style="margin-top: 1rem; font-size: 1.1rem;">¿Preguntas o comentarios?</p>
+                <div style="font-size: 3rem; margin-top: 1rem;">🙏</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <address>
+            Autores: Alexander Castaño D. - Deiby Becerra A. - Juan Esteban Sierra A. - Samuel Jaraba G.<br>
+            Servicio Nacional de Aprendizaje - Centro de Servicios de Salud-Regional Antioquia<br>
+            </address>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
