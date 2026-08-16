@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
+    var btnExplorar = document.getElementById('btn-explorar');
+    var portada = document.getElementById('portada');
+    var contenidoPrincipal = document.getElementById('contenido-principal');
+
+    if (btnExplorar && portada && contenidoPrincipal) {
+        btnExplorar.addEventListener('click', function () {
+            portada.style.display = 'none';
+            contenidoPrincipal.style.display = 'block';
+            window.scrollTo(0, 0);
+        });
+
+        btnExplorar.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    }
+
     var tabs = document.querySelectorAll('nav ul li a');
     var slides = document.querySelectorAll('.slide');
 
@@ -194,23 +213,4 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
-
-    var btnExplorar = document.getElementById('btn-explorar');
-    var portada = document.getElementById('portada');
-    var contenidoPrincipal = document.getElementById('contenido-principal');
-
-    if (btnExplorar && portada && contenidoPrincipal) {
-        btnExplorar.addEventListener('click', function () {
-            portada.style.display = 'none';
-            contenidoPrincipal.style.display = 'block';
-            window.scrollTo(0, 0);
-        });
-
-        btnExplorar.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                this.click();
-            }
-        });
-    }
 });
